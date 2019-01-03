@@ -1,0 +1,104 @@
+https://login.antispamcloud.com/spampanel.php#/dashboard
+Sys1!Adm
+
+https://my.spamexperts.com/clientarea.php
+Sys1!Adm
+
+Remove mailq
+
+mailq | grep frozen | awk '{print $3}' | xargs exim -Mrm
+
+
+192.201  182.156.232.54:3389
+
+https://10.0.9.9/index.php   elastic
+
+spamreport@spamrl.com
+
+http://frp.fcoos.net
+--------------------------------------------------------------------------------------------------------------------------------------
+banned ip from fail2ban
+------------------------
+
+203.192.246.174
+
+sudo zgrep 'Ban' /var/log/fail2ban.log*
+--------------------------------------------------------------------------------------------------------------------------------------
+Remove particular user's mail from queue
+----------------------------------------
+
+mailq | grep "teamleaderblr@silvercrest.in" -B1 | grep -oE "^[A-Z0-9]{10,11}" | sudo postsuper -d -
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Resent all mails from queue
+---------------------------
+
+postqueue -f
+--------------------------------------------------------------------------------------------------------------------------------------
+“The volume boot has only 0 bytes disk space remaining”
+
+-------------------------------------------------------
+
+dpkg --get-selections | grep "linux-image-[[:digit:]].*" | tr "\t" ";" | cut -d ";" -f1
+
+linux-image-3.19.0-7-generic 
+linux-image-3.18.0-13-generic  
+linux-image-3.16.0-23-generic
+
+
+sudo apt-get purge linux-image-3.16.0-23-generic
+
+sudo apt-get autoclean && sudo apt-get autoremove
+
+-----------------------------------------------------------------------------------------------------------------------------------
+ldap
+
+
+dn              = cn=vmail,dc=fcoos,dc=in
+dnpass          = 8hCKFtR5QsiApmg1WXvyGXT5BRkztp
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Ovirt-agent fix on ubuntu16.04
+------------------------------
+
+We need to create file
+
+apt-get install ovirt-guest-agent 
+
+vim /var/log/ovirt-guest-agent/ovirt-guest-agent.log
+
+chown ovirtagent:ovirtagent /var/log/ovirt-guest-agent/ovirt-guest-agent.log
+
+chmod 755 /var/log/ovirt-guest-agent/ovirt-guest-agent.log
+
+vim /dev/virtio-ports/com.redhat.rhevm.vdsm
+
+chmod 755 /dev/virtio-ports/com.redhat.rhevm.vdsm
+
+chown ovirtagent:ovirtagent /dev/virtio-ports/com.redhat.rhevm.vdsm
+
+systemctl start ovirt-guest-agent.service
+
+systemctl enable ovirt-guest-agent
+
+systemctl status ovirt-guest-agent.service
+
+systemctl restart ovirt-guest-agent.service
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+create user in pfsense
+
+echo "nagios" | pw usermod nagios -h 0
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+/opt/thinlinc/etc/licenses/
+
+
+H0r$eP0wer@1415$
